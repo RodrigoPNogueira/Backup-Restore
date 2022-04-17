@@ -1,0 +1,276 @@
+object Form1: TForm1
+  Left = 193
+  Top = 120
+  Width = 771
+  Height = 641
+  Caption = 
+    'Sistema para efetuar backup_restore - Prof Neri Neitzke - INFORM' +
+    'ATICON - ULBRA'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label6: TLabel
+    Left = 14
+    Top = 10
+    Width = 609
+    Height = 37
+    Caption = 'Prof Neri Aldoir Neitzke - INFORMATICON'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -32
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 216
+    Top = 52
+    Width = 249
+    Height = 57
+    Caption = 'Escolha.: Backup ou Restore'
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'Backup'
+      'Restore')
+    TabOrder = 0
+    OnClick = RadioGroup1Click
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 124
+    Width = 305
+    Height = 373
+    Caption = 'Backup'
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 16
+      Top = 24
+      Width = 186
+      Height = 13
+      Caption = 'Escolha o arquivo para fazer o backup '
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 256
+      Top = 40
+      Width = 23
+      Height = 22
+      Caption = '...'
+      OnClick = SpeedButton1Click
+    end
+    object Label2: TLabel
+      Left = 16
+      Top = 72
+      Width = 53
+      Height = 13
+      Caption = 'Salvar em.:'
+    end
+    object Label4: TLabel
+      Left = 16
+      Top = 229
+      Width = 46
+      Height = 26
+      Caption = 'Nome do Arquivo.:'
+      WordWrap = True
+    end
+    object Label5: TLabel
+      Left = 13
+      Top = 267
+      Width = 46
+      Height = 13
+      Caption = 'Unidade.:'
+    end
+    object Edit1: TEdit
+      Left = 16
+      Top = 40
+      Width = 233
+      Height = 21
+      TabOrder = 0
+    end
+    object DirectoryListBox1: TDirectoryListBox
+      Left = 16
+      Top = 88
+      Width = 257
+      Height = 121
+      ItemHeight = 16
+      TabOrder = 1
+    end
+    object Edit3: TEdit
+      Left = 64
+      Top = 232
+      Width = 209
+      Height = 21
+      TabOrder = 2
+    end
+    object DriveComboBox1: TDriveComboBox
+      Left = 64
+      Top = 264
+      Width = 145
+      Height = 19
+      DirList = DirectoryListBox1
+      TabOrder = 3
+    end
+    object Button1: TButton
+      Left = 224
+      Top = 344
+      Width = 75
+      Height = 25
+      Caption = 'Gravar'
+      TabOrder = 4
+      OnClick = Button1Click
+    end
+    object cb_IgnoreChecksums: TCheckBox
+      Left = 16
+      Top = 296
+      Width = 121
+      Height = 17
+      Caption = 'IgnoreChecksums'
+      TabOrder = 5
+    end
+    object cb_IgnoreLimbo: TCheckBox
+      Left = 16
+      Top = 320
+      Width = 97
+      Height = 17
+      Caption = 'IgnoreLimbo'
+      TabOrder = 6
+    end
+    object cb_NoGarbageCollection: TCheckBox
+      Left = 144
+      Top = 296
+      Width = 97
+      Height = 17
+      Caption = 'NoGarbageCollection'
+      Checked = True
+      State = cbChecked
+      TabOrder = 7
+    end
+    object cb_NonTransportable: TCheckBox
+      Left = 144
+      Top = 320
+      Width = 97
+      Height = 17
+      Caption = 'NonTransportable'
+      Checked = True
+      State = cbChecked
+      TabOrder = 8
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 320
+    Top = 124
+    Width = 345
+    Height = 373
+    Caption = 'Restore'
+    TabOrder = 2
+    Visible = False
+    object Label3: TLabel
+      Left = 16
+      Top = 24
+      Width = 164
+      Height = 13
+      Caption = 'Escolha o arquivo a ser restaurado'
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 288
+      Top = 40
+      Width = 23
+      Height = 22
+      Caption = '...'
+      OnClick = SpeedButton2Click
+    end
+    object Label7: TLabel
+      Left = 16
+      Top = 80
+      Width = 187
+      Height = 13
+      Caption = 'Escolha o local e arquivo a ser gravado'
+    end
+    object SpeedButton3: TSpeedButton
+      Left = 288
+      Top = 96
+      Width = 23
+      Height = 22
+      Caption = '...'
+      OnClick = SpeedButton3Click
+    end
+    object Edit2: TEdit
+      Left = 16
+      Top = 40
+      Width = 257
+      Height = 21
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 256
+      Top = 336
+      Width = 75
+      Height = 25
+      Caption = 'Restaurar'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+    object Edit4: TEdit
+      Left = 16
+      Top = 96
+      Width = 257
+      Height = 21
+      TabOrder = 2
+    end
+    object cb_Replace: TCheckBox
+      Left = 32
+      Top = 208
+      Width = 97
+      Height = 17
+      Caption = 'Replace'
+      Checked = True
+      State = cbChecked
+      TabOrder = 3
+    end
+    object cb_NoValidityCheck: TCheckBox
+      Left = 160
+      Top = 208
+      Width = 97
+      Height = 17
+      Caption = 'NoValidityCheck'
+      Checked = True
+      State = cbChecked
+      TabOrder = 4
+    end
+  end
+  object Memo1: TMemo
+    Left = 8
+    Top = 512
+    Width = 657
+    Height = 145
+    TabOrder = 3
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 264
+    Top = 132
+  end
+  object IBBackupService1: TIBBackupService
+    TraceFlags = []
+    BlockingFactor = 0
+    Options = []
+    Left = 208
+    Top = 64
+  end
+  object OpenDialog2: TOpenDialog
+    Left = 608
+    Top = 140
+  end
+  object IBRestoreService1: TIBRestoreService
+    TraceFlags = []
+    PageBuffers = 0
+    Left = 240
+    Top = 64
+  end
+end
